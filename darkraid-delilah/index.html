@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/js/mimicry.js"></script>
+<meta charset="utf-8" />
+<title>Darkraid: Delilah</title>
+
+<style type = "text/css">
+.btn{
+	position:absolute;
+	z-index:5;
+	top:400px;
+	left:445px;
+	display:none;
+	border-style:solid;
+	border-width:5px;
+	width:166px;
+	height:78px;
+	font-size:30pt;
+	font-family:Georgia;
+	border-color:rgb(170,155,30);
+	color:rgb(170,155,30);
+	background-color:black;
+}
+.btn:hover{
+	background-color:dimgrey;
+}
+.btn:focus{
+	outline:none;
+}
+.canvasClass{
+	border:none;
+	position:absolute;
+	z-index:1; 
+	cursor: url(textures/cursor.png) 0 0, default;
+}
+</style>
+
+</head>
+
+<body style = "margin:0; background-color:black;overflow:hidden;">
+<!--<video id = "intro_video"  preload="none" 
+style = "border:none;position:absolute;z-index:4;top:0px;left:133px;" width="800" height="600">
+  <source src="armor/ag_intro.ogv" type="video/ogg">
+  <source src="armor/ag_intro.m4v" type="video/mp4">
+</video>
+
+<button id = "playbutton" onclick =  "PlayButtonClicked()" class="btn">Play
+</button>-->
+
+<canvas  id = "mainCanvas" class="canvasClass"
+width = "1066" height = "600"></canvas>
+<div id="canvas-container" style = "text-align:center;z-index:3;position:absolute;top:0px;left:0px;width:100%;">
+<canvas id = "loadingCanvas" style = "border:none;z-index:3;display: inline;" 
+width = "610" height = "450"></canvas> 
+</div>
+<img id="locked-cursor" src="textures/cursor.png" style = "visibility:hidden;position:absolute;top:0px;left:0px;z-index:2;"></img>
+
+<script charset="utf-8" src="script/netcode.js"></script>
+
+<script charset="utf-8" src="script/loading.js"></script>
+<script charset="utf-8" src="script/filesave.js"></script>
+<script charset="utf-8" src="script/shader.js"></script>
+<script charset="utf-8" src="script/model3d.js"></script>
+<script charset="utf-8" src="script/obj_convert.js"></script>
+<script charset="utf-8" src="matrix/common.js"></script>
+<script charset="utf-8" src="matrix/mat4.js"></script>
+<script charset="utf-8" src="matrix/mat3.js"></script>
+<script charset="utf-8" src="matrix/vec4.js"></script>
+<script charset="utf-8" src="matrix/vec3.js"></script>
+<script charset="utf-8" src="matrix/quat.js"></script>
+<script charset="utf-8" src="howler/howler.core.js"></script>
+<script charset="utf-8" src="howler/howler_spatial.js"></script>
+<script charset="utf-8" src="script/soundObject.js"></script>
+
+<script charset="utf-8" src="script/utils.js"></script>
+<script charset="utf-8" src="script/anim.js"></script>
+<script charset="utf-8" src="script/portrait.js"></script>
+<script charset="utf-8" src="script/actor.js"></script>
+<script charset="utf-8" src="script/motion.js"></script>
+<script charset="utf-8" src="script/trigger.js"></script>
+<script charset="utf-8" src="script/particleEffects.js"></script>
+<script charset="utf-8" src="script/lightDecal.js"></script>
+
+<script charset="utf-8" src="script/pathfinder_cluster.js"></script>
+<script charset="utf-8" src="script/pathfinder.js"></script>
+<script charset="utf-8" src="script/sector.js"></script>
+<script charset="utf-8" src="script/moveOrder.js"></script>
+<script charset="utf-8" src="script/player.js"></script>
+<script charset="utf-8" src="script/builder.js"></script>
+<script charset="utf-8" src="script/navmesh.js"></script>
+<script charset="utf-8" src="script/navsector.js"></script>
+<script charset="utf-8" src="script/task.js"></script>
+
+<script charset="utf-8" src="script/searchFilter.js"></script>
+<script charset="utf-8" src="script/unit.js"></script>
+<script charset="utf-8" src="script/ability.js"></script>
+<script charset="utf-8" src="script/projectile.js"></script>
+<script charset="utf-8" src="script/weapon.js"></script>
+<script charset="utf-8" src="script/upgrade.js"></script>
+<script charset="utf-8" src="script/unitPrototype.js"></script>
+<script charset="utf-8" src="script/doodad.js"></script>
+<script charset="utf-8" src="script/world.js"></script>
+
+<script charset="utf-8" src="script/camera.js"></script>
+<script charset="utf-8" src="script/environment.js"></script>
+<script charset="utf-8" src="script/terrain.js"></script>
+<script charset="utf-8" src="script/map.js"></script>
+<script charset="utf-8" src="script/editor.js"></script>
+<script charset="utf-8" src="script/tilePaint.js"></script>
+<script charset="utf-8" src="script/editorAction.js"></script>
+<script charset="utf-8" src="script/minimap.js"></script>
+<script charset="utf-8" src="script/fonts.js"></script>
+<script charset="utf-8" src="script/webGL.js"></script>
+<script charset="utf-8" src="script/gui.js"></script>
+<script charset="utf-8" src="script/gui_alert.js"></script>
+<script charset="utf-8" src="script/command.js"></script>
+<script charset="utf-8" src="script/control.js"></script>
+<script charset="utf-8" src="script/game.js"></script>
+<script charset="utf-8" src="script/assetImport.js"></script>
+</body>
+</html>
